@@ -1,9 +1,9 @@
 
-public class Book {
+public class BOOK {
 	private String bookID, title, author;
 	private int quantity, publicationYear;
 
-	public Book(String bookID, String title, String author, int quantity, int publicationYear) {
+	public BOOK(String bookID, String title, String author, int quantity, int publicationYear) {
 		this.bookID = bookID;
 		this.title = title;
 		this.author = author;
