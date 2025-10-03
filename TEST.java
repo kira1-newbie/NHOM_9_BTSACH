@@ -4,13 +4,8 @@ public class TEST {
 
  {
 
-  BOOK sach=new BOOK("BOOK01","FANTASTIC","CONAN",2020,10);
-
+  BOOK sach=new BOOK("BOOK01","ABC","TIEN",1990,10);
   sach.displayInfo();
-
-  sach.setAuthor("Trung");
-
-  System.out.println("AUTHOR 1: "+sach.getAuthor());
 
  }
 
