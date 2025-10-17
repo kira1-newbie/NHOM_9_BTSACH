@@ -1,14 +1,17 @@
+import java.util.Scanner;
 public class TextBook extends Book {
 	private String monHoc,capDo;
-	public TextBook(String bookID, double giaCoBan, String title, String author, int quantity, int publicationYear, String monHoc,
+	Scanner sc=new Scanner(System.in);
+	public TextBook(String bookID, String title, String author, int quantity, int publicationYear, String monHoc,
 			String capDo) {
-		super(bookID, title, author, quantity, publicationYear,giaCoBan);
+		super(bookID, title, author, quantity, publicationYear);
 		this.monHoc = monHoc;
 		this.capDo = capDo;
 	}
+	
 	public TextBook() {
+		super();
 	}
-	@Override
 	public void Nhap()
 	{
 		super.Nhap();
@@ -17,14 +20,8 @@ public class TextBook extends Book {
 		System.out.println("Nhập cấp độ ");
 		capDo=sc.nextLine();
 	}
-	@Override
 	public String toString() {
-		return super.toString() + "\nmon hoc: "+monHoc+"\ncap do: "+capDo
-		+"\nGia Ban:"+tinhGiaBan();
+		return super.toString() + "\nmon hoc: "+monHoc+"\ncap do: "+capDo;
 	}
-	@Override
-	public double tinhGiaBan()
-	{
-		return getgiaCoBan()+((2025-getPublicationYear())*5000);
-	}
+	
 }
