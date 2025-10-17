@@ -1,28 +1,19 @@
 import java.util.Scanner;
-public abstract class Book {
-	private String bookID;
+public class Book {
+	protected String bookID;
 	private String title, author;
 	private int quantity, publicationYear;
-	private double giaCoBan;
     Scanner sc = new Scanner(System.in);
-	public Book(String bookID, String title, String author, int quantity, int publicationYear, double giaCoBan) {
+	public Book(String bookID, String title, String author, int quantity, int publicationYear) {
 		this.bookID = bookID;
 		this.title = title;
 		this.author = author;
 		this.quantity = quantity;
 		this.publicationYear = publicationYear;
-		this.giaCoBan=giaCoBan;
 	}
 	public Book() {
+		super();
 	}
-	public Double getgiaCoBan(){
-		return giaCoBan;
-	}
-	public void setgiaCoBan(Double giaCoBan)
-	{
-		this.giaCoBan=giaCoBan;
-	}
-
 	public String getAuthor() {
 		return author;
 	}
@@ -60,16 +51,13 @@ public abstract class Book {
 	        System.out.print("Nhập author: "); author = sc.nextLine();
 	        System.out.print("Nhập quantity: "); quantity = sc.nextInt();
 	        System.out.print("Nhập publicationYear: "); publicationYear = sc.nextInt();
-	        System.out.print("Nhập giá cơ bản: "); giaCoBan=sc.nextDouble();
-			sc.nextLine();
+	        sc.nextLine();
 	  }
-	  @Override
 	public String toString() {
 		return "BookID: "+bookID+
 				"\nTitle: "+title+
 				"\nAuthor: "+author+
 				"\nPublication Year: "+publicationYear+
-				"\nQuantity: "+quantity+ "\nGia co ban: "+giaCoBan;
+				"\nQuantity: "+quantity;
 	}
-	public abstract double tinhGiaBan();
 }

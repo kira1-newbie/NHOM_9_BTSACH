@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 public class BookManager {
 	private List<Book> ds=new ArrayList<>();
+	Scanner sc=new Scanner(System.in);
 	public void themMoi(Book s) {
 	    for (Book c : ds) {
 	        if (c.equals(s)) {
